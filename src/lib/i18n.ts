@@ -1,0 +1,76 @@
+export type Locale = "en" | "ar";
+
+export const dict = {
+  en: {
+    explore: "Explore",
+    courses: "Courses",
+    ebooks: "Ebooks",
+    creators: "Creators",
+    membership: "Membership",
+    library: "My Library",
+    dashboard: "Creator Studio",
+    admin: "Admin",
+    signIn: "Sign in",
+    signOut: "Sign out",
+    getStarted: "Start selling",
+    heroTitle: "Unlock Your Potential With Premium Digital Knowledge",
+    heroSub:
+      "Learn, Create, and Grow with thousands of premium ebooks, courses, and digital resources from expert creators worldwide.",
+    exploreProducts: "Explore Products",
+    becomeCreator: "Become a Creator",
+    featured: "Featured Products",
+    bestSelling: "Best Selling Courses",
+    trending: "Trending Ebooks",
+    topCreators: "Top Creators",
+    plans: "Membership Plans",
+    reviews: "Customer Reviews",
+    why: "Why Choose Us",
+    viewAll: "View all",
+    buyNow: "Buy now",
+    addFav: "Save",
+    price: "Price",
+    free: "Free",
+    search: "Search products, courses, creators…",
+    commission: "Only 5% platform fee",
+    aiAssistant: "AI Assistant",
+  },
+  ar: {
+    explore: "استكشف",
+    courses: "الدورات",
+    ebooks: "الكتب الرقمية",
+    creators: "المبدعون",
+    membership: "العضوية",
+    library: "مكتبتي",
+    dashboard: "استوديو المبدع",
+    admin: "الإدارة",
+    signIn: "تسجيل الدخول",
+    signOut: "خروج",
+    getStarted: "ابدأ البيع",
+    heroTitle: "أطلق إمكاناتك مع المعرفة الرقمية المتميزة",
+    heroSub:
+      "تعلّم وأبدع وانمُ مع آلاف الكتب والدورات والموارد الرقمية المتميزة من مبدعين خبراء حول العالم.",
+    exploreProducts: "تصفح المنتجات",
+    becomeCreator: "كن مبدعاً",
+    featured: "منتجات مختارة",
+    bestSelling: "أفضل الدورات مبيعاً",
+    trending: "الكتب الأكثر رواجاً",
+    topCreators: "أفضل المبدعين",
+    plans: "خطط العضوية",
+    reviews: "آراء العملاء",
+    why: "لماذا تختارنا",
+    viewAll: "عرض الكل",
+    buyNow: "اشترِ الآن",
+    addFav: "حفظ",
+    price: "السعر",
+    free: "مجاني",
+    search: "ابحث عن منتجات، دورات، مبدعين…",
+    commission: "عمولة المنصة 5% فقط",
+    aiAssistant: "مساعد الذكاء الاصطناعي",
+  },
+} as const;
+
+export type Dict = (typeof dict)["en"];
+
+export function t(locale: Locale): Dict {
+  return (dict[locale] ?? dict.en) as Dict;
+}

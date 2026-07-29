@@ -1,0 +1,19 @@
+{
+  "name": "Digital Knowledge Marketplace",
+  "short_name": "DKM",
+  "description": "Premium global marketplace for digital creators: ebooks, courses, templates and memberships.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07060e",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "categories": ["education", "shopping", "business"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
